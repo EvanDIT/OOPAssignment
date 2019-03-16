@@ -6,6 +6,7 @@ public class UI extends PApplet
 {
     Button b;
     MovingCircle mc;
+    Ship s;
 
     boolean[] keys = new boolean[1024];
 
@@ -27,7 +28,7 @@ public class UI extends PApplet
 
     public void settings()
     {
-        size(800, 800);
+        size(900,700);
         // Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
     }
@@ -36,6 +37,7 @@ public class UI extends PApplet
     {
         b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
+        s = new Ship(this,width,height);
     }
 
     public void draw()
@@ -45,6 +47,8 @@ public class UI extends PApplet
 
         mc.update();
         mc.render();
+        s.render();
+
 
         if (checkKey(LEFT))
         {
