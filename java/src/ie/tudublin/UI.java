@@ -28,7 +28,7 @@ public class UI extends PApplet
 
     public void settings()
     {
-        size(900,700);
+        size(1520,800);
         // Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
     }

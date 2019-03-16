@@ -6,8 +6,7 @@ public class Ship
 {
     UI ui;
     private int height;
-    private int width;
-
+	private int width;
 
 public Ship(UI ui,int height,int width)
 {
@@ -17,17 +16,18 @@ public Ship(UI ui,int height,int width)
 }
 
 public void render()
-{
-    int height = 700;
-	int width = 900;
-	ui.stroke(255,0,0);
+{	
+	int screenwidth = 1516;
+	int rectdown = 595;
+	int gap = 200;
+	ui.stroke(169,169,169);
 	ui.strokeWeight(5);
-	ui.rect(0, 500, 900, 250);
-	ui.fill(0,169,169);
-	ui.line(height,width -400, width, height); //Bottom Right Line
-	ui.line(0,height,200,height -200); //Bottom Left Line
-	ui.line(200,500,0,0); // Left Top Line
-	ui.line(width,0,height, width - 400); // Right Top Line
-	ui.line(200,500,700,500); // Middle Line
+	ui.fill(0,0,0);
+	ui.rect(0, rectdown, screenwidth, gap); 
+	ui.line(screenwidth,800,screenwidth - gap,rectdown); //Bottom Right Line
+	ui.line(0,800,gap,rectdown); //Bottom Left Line
+	ui.line(gap,rectdown,0,0); // Left Top Line
+	ui.line(screenwidth, 0, screenwidth-gap, rectdown); // Right Top Line
+	//ui.line(200,500,700,500); // Middle Line
 }
 }
