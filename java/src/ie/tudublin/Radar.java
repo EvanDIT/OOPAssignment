@@ -22,15 +22,15 @@ public class Radar
     public void render()
     {
         ui.noFill();
-        stroke(255);
+        ui.stroke(50,205,50);
         ui.ellipse(pos.x, pos.y, radius *2, radius * 2);
-        ui.ellipse(pos.x, pos.y, (float) (radius * 0.2), radius * 0.2);
+        ui.ellipse(pos.x, pos.y, radius * 1, radius * 1);
+        ui.ellipse(pos.x, pos.y, radius * 1, radius * 1);
+        ui.line(pos.x, pos.y - radius, pos.x, pos.y + radius);  //vertical radar line
+        ui.line(pos.x - radius, pos.y, pos.x + radius, pos.y); //horizontal radar line
         float x2 = pos.x + (float) Math.sin(theta) * radius;
         float y2 = pos.y - (float) Math.cos(theta) * radius;
-        ui.line(pos.x, pos.y, x2, y2);
-    }
-
-    private void stroke(int i) {
+        ui.line(pos.x, pos.y, x2, y2); //Moving line 
     }
 
     float timeDelta = 1.0f / 60.0f;

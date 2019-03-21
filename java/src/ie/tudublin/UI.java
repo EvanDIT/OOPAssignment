@@ -68,5 +68,8 @@ public class UI extends PApplet
 
 	public void ellipse(Object mouseX, Object mouseY, float f, double d) {
 	}
+
+	public void stroke() {
+	}
 }
 
