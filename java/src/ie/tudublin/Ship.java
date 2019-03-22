@@ -24,7 +24,7 @@ public void render()
 
 	ui.stroke(47,79,79);
 	ui.strokeWeight(5);
-	ui.fill(92,192,192);
+	ui.fill(150,200,255);
 	ui.rect(0, rectdown, screenwidth, gap); 
 	ui.line(screenwidth,800,screenwidth - gap,rectdown); //Bottom Right Line
 	ui.line(0,800,gap,rectdown); //Bottom Left Line
