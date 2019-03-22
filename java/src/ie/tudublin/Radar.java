@@ -24,18 +24,18 @@ public class Radar
         ui.noFill();
         ui.stroke(50,205,50);
         ui.strokeWeight(2);
-        ui.ellipse(pos.x, pos.y + 300, radius *2, radius * 2);
+        ui.ellipse(pos.x, pos.y + 300, radius * 2, radius * 2);
         ui.ellipse(pos.x, pos.y + 300, radius * 1, radius * 1);
         ui.ellipse(pos.x, pos.y + 300, radius * 1, radius * 1);
         ui.ellipse(pos.x, pos.y + 300, radius + 40, radius + 40);
         ui.ellipse(pos.x, pos.y + 300, radius - 40 , radius - 40);
         ui.strokeWeight(2);
-        ui.line(pos.x, pos.y - radius , pos.x, pos.y + radius);  //vertical radar line
+        ui.line(pos.x , pos.y - radius + 300 , pos.x, pos.y + 380);  //vertical radar line
         ui.line(pos.x - radius, pos.y + 300, pos.x + radius, pos.y + 300); //horizontal radar line
         float x2 = pos.x + (float) Math.sin(theta) * radius;
         float y2 = pos.y - (float) Math.cos(theta) * radius;
         ui.strokeWeight(3);
-        ui.line(pos.x, pos.y + 300, x2, y2); //Moving line 
+        ui.line(pos.x, pos.y + 300, x2 , y2); //Moving line 
     }
 
     float timeDelta = 1.0f / 60.0f;
