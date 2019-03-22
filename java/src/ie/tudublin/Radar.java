@@ -33,9 +33,9 @@ public class Radar
         ui.line(pos.x , pos.y - radius + 300 , pos.x, pos.y + 380);  //vertical radar line
         ui.line(pos.x - radius, pos.y + 300, pos.x + radius, pos.y + 300); //horizontal radar line
         float x2 = pos.x + (float) Math.sin(theta) * radius;
-        float y2 = pos.y - (float) Math.cos(theta) * radius;
+        float y2 = pos.y + 300- (float) Math.cos(theta) * radius;
         ui.strokeWeight(3);
-        ui.line(pos.x, pos.y + 300, x2 , y2); //Moving line 
+        ui.line(pos.x, pos.y + 300, x2, y2); //Moving line 
     }
 
     float timeDelta = 1.0f / 60.0f;
