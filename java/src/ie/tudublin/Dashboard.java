@@ -43,20 +43,14 @@ public void render()
 
 void buttons()
 {
-  
+//Loop to draw 3 buttons that spread over the landing gear button.
     ui.stroke(0,100,0);
-    int gridSize = 5;
-    float w = width / gridSize;		
-    // Nested loop
+    int gridSize = 3;	
     for(int i = 0 ; i < gridSize ; i ++)
     {
-        for(int j = 0 ; j < gridSize ; j ++)
-        {
-            float x = i * w + w;
-            float y = j * w + w;
-
-            ui.rect(x, y, w, w);
-        }
+        float x = i * 100 + 300;
+        ui.fill(255,225,10);           
+        ui.rect(x, 605, 50,30);
     }
 }
 
