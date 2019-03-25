@@ -36,6 +36,7 @@ public class Radar
         float y2 = pos.y + 300- (float) Math.cos(theta) * radius;
         ui.strokeWeight(3);
         ui.line(pos.x, pos.y + 300, x2, y2); //Moving line 
+        
     }
 
     float timeDelta = 1.0f / 60.0f;

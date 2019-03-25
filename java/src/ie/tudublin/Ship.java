@@ -31,6 +31,5 @@ public void render()
 	ui.line(gap,rectdown,0,0); // Left Top Line
 	ui.line(screenwidth, 0, screenwidth-gap, rectdown); // Right Top Line
 		// ui.line(200,500,700,500); // Middle Line
-	
 }
 }
