@@ -24,6 +24,7 @@ public Dashboard(UI ui, float x, float y, float width, float height, String text
 public void render()
 {
     ui.stroke(255,0,0);
+    ui.fill(25,25,112);
     ui.rect(x , y , width, height);
     ui.line(300,650,330,680);
     ui.line(300,750,330,720);
@@ -40,6 +41,24 @@ public void render()
     ui.text(text, x + width * 0.5f, y + height * 0.5f);
 }
 
+void buttons()
+{
+  
+    ui.stroke(0,100,0);
+    int gridSize = 5;
+    float w = width / gridSize;		
+    // Nested loop
+    for(int i = 0 ; i < gridSize ; i ++)
+    {
+        for(int j = 0 ; j < gridSize ; j ++)
+        {
+            float x = i * w + w;
+            float y = j * w + w;
+
+            ui.rect(x, y, w, w);
+        }
+    }
+}
 
 }
 

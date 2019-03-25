@@ -70,6 +70,7 @@ public void setup()
         radar.update();
         radar.render();
         dash.render();
+        dash.buttons();
         
 
 
