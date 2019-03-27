@@ -58,7 +58,7 @@ public void setup()
     public void draw()
     {
         background(0);   
-        b.render();
+       // b.render();
         mc.update();
         mc.render();
         s.render();
@@ -67,12 +67,29 @@ public void setup()
         dash.render();
         dash.buttons();
         dash.radardots();
+       
+       
+       
+        stroke(0);
+        line(920, 700, 1020, 700);
+        int y = 720;
+        if (key == CODED) {
+        if (keyCode == UP) {
+             y = 640;
+         } else if (keyCode == DOWN) {
+            y = 720;
+         }
+             } else {
+              y = 720;
+            }
+        rect(920, y, 100, 45);
+}
                     
-        if (checkKey(LEFT))
-        {
-            System.out.println("Left arrow key pressed");
-        }
-    }
+    //     if (checkKey(LEFT))
+    //     {
+    //         System.out.println("Left arrow key pressed");
+    //     }
+    // }
 
 
 	public void ellipse(Object mouseX, Object mouseY, float f, double d) {
