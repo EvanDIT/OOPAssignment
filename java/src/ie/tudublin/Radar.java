@@ -16,16 +16,11 @@ public class Radar
         this.ui = ui;
         this.frequency = frequency;
         pos = new PVector(x, y);
-<<<<<<< HEAD
         this.radius = radius - 20;
-=======
-        this.radius = radius;
->>>>>>> 8f5fee54af6d6253030d429f4765a4e9bfe12053
     }
 
     public void render()
     {
-<<<<<<< HEAD
         ui.noFill();
         ui.stroke(50,205,50);
         ui.strokeWeight(2);
@@ -42,34 +37,13 @@ public class Radar
         ui.strokeWeight(3);
         ui.line(pos.x, pos.y + 300, x2, y2); //Moving line 
         
-=======
-        /*ui.pushMatrix();        
-        ui.noFill();
-        ui.stroke(0, 200, 0);
-        ui.translate(pos.x, pos.y);
-        ui.rotate(theta);
-        ui.ellipse(0, 0, radius * 2, radius * 2);
-        ui.line(0,0,0,-radius);
-        ui.popMatrix();
-        */
-
-        ui.noFill();
-        ui.ellipse(pos.x, pos.y, radius * 2, radius * 2);
-        float x2 = pos.x + (float) Math.sin(theta) * radius;
-        float y2 = pos.y - (float) Math.cos(theta) * radius;
-        ui.line(pos.x, pos.y, x2, y2);
->>>>>>> 8f5fee54af6d6253030d429f4765a4e9bfe12053
     }
 
     float timeDelta = 1.0f / 60.0f;
 
     public void update()
     {
-<<<<<<< HEAD
         theta += PApplet.TWO_PI * timeDelta * frequency ;
-=======
-        theta += PApplet.TWO_PI * timeDelta * frequency;
->>>>>>> 8f5fee54af6d6253030d429f4765a4e9bfe12053
     }
 
     /**

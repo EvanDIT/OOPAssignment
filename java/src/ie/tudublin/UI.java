@@ -35,13 +35,12 @@ public class UI extends PApplet
     {
         size(1520,800);
         // Use fullscreen instead of size to make your interface fullscreen
-        //fullScreen(P3D); 
+        //fullScreen(); 
     }
     
 public void setup()
     {
         b = new Button(this, 50, 50, 100, 50, "I am a button");
-<<<<<<< HEAD
         mc = new MovingCircle(this, width / 2, height / 2, 100);
         s = new Ship(this,width,height);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
@@ -56,21 +55,12 @@ public void setup()
     
     Radar radar;
     int value = 0;
-=======
-        mc = new MovingCircle(this, width / 2, height * .75f, 50);
-        radar = new Radar(this, 1, width / 2, height / 2, 100);
-    }
-
-    Radar radar;
-
->>>>>>> 8f5fee54af6d6253030d429f4765a4e9bfe12053
     public void draw()
     {
         background(0);   
         b.render();
         mc.update();
         mc.render();
-<<<<<<< HEAD
         s.render();
         radar.update();
         radar.render();
@@ -78,12 +68,6 @@ public void setup()
         dash.buttons();
         dash.radardots();
                     
-=======
-
-        radar.update();
-        radar.render();
-
->>>>>>> 8f5fee54af6d6253030d429f4765a4e9bfe12053
         if (checkKey(LEFT))
         {
             System.out.println("Left arrow key pressed");
