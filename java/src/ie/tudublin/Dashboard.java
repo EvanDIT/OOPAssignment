@@ -31,7 +31,7 @@ int topleft = 650;
 int leftmiddletop = 680;
 int leftsidebottom = 750;
     ui.stroke(255,0,0);
-    ui.fill(25,25,112);
+    ui.fill(255,100,0);
     ui.rect(x , y , width, height);
     ui.line(leftside,topleft,leftmiddle,leftmiddletop);
     ui.line(leftside,leftsidebottom,leftmiddle,720);
@@ -57,6 +57,10 @@ void buttons()
         ui.fill(255,225,10);           
         ui.rect(x, 605, 50,30);
     }
+    ui.fill(0);
+    ui.text("1", 325, 615, 30);
+    ui.text("2", 425, 615, 30);
+    ui.text("3", 525, 615, 30);
 }
 
 void radardots()
