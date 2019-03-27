@@ -54,7 +54,6 @@ public void setup()
 
     
     Radar radar;
-    int value = 0;
     public void draw()
     {
         background(0);   
@@ -76,13 +75,21 @@ public void setup()
         if (key == CODED) {
         if (keyCode == UP) {
              y = 640;
+             fill(107,142,35);
          } else if (keyCode == DOWN) {
             y = 720;
+            fill(255,0,0);
          }
              } else {
               y = 720;
             }
         rect(920, y, 100, 45);
+textSize(20);
+fill(0, 0,0);
+text("Foward", 970, 660, 30);
+
+text("Reverse", 970, 740, 30);
+
 }
                     
     //     if (checkKey(LEFT))
