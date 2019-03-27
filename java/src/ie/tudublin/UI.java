@@ -68,7 +68,7 @@ public void setup()
         dash.radardots();
        
        
-       
+       //FOWARDS BACKWARDS CODE
         stroke(0);
         line(920, 700, 1020, 700);
         int y = 720;
@@ -81,14 +81,17 @@ public void setup()
             fill(255,0,0);
          }
              } else {
-              y = 720;
+              y = 680;
+              fill(255,140,0);
             }
         rect(920, y, 100, 45);
-textSize(20);
-fill(0, 0,0);
-text("Foward", 970, 660, 30);
-
-text("Reverse", 970, 740, 30);
+        textSize(20);
+        fill(0,0,0);
+        text("Foward", 970, 660, 30);
+        text("Reverse", 970, 740, 30);
+        stroke(0);
+        line(910,620,1030,620);
+        line(910,785,1030,785);
 
 }
                     
