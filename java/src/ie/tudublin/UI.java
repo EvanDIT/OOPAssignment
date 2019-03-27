@@ -8,6 +8,9 @@ public class UI extends PApplet
     MovingCircle mc;
     Ship s;
     Dashboard dash;
+    float circleC;
+    float circleC2;
+    float circleC3;
   
 
     boolean[] keys = new boolean[1024];
@@ -34,24 +37,16 @@ public class UI extends PApplet
         // Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
     }
-
-float circleC;
-float circleC2;
-float circleC3;
-
     
 public void setup()
     {
         b = new Button(this, 50, 50, 100, 50, "I am a button");
-        mc = new MovingCircle(this, width / 2, height / 2, 50);
+        mc = new MovingCircle(this, width / 2, height / 2, 100);
         s = new Ship(this,width,height);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
-        dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear");
-       
-        //circleC = random(0,width);
-        //circleC2 = random(0,width);
-        //circleC3 = random(0,width);
-
+        dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear",width / 2f,width /2f,width/2f);
+    
+        //Circles for Radar
         circleC = width / 2;
         circleC2 = (float) (width / 2);
         circleC3 = (float) (width / 2);
@@ -71,27 +66,8 @@ public void setup()
         radar.render();
         dash.render();
         dash.buttons();
-        
-
-
-        // noFill();
-        // ellipse(mouseX, mouseY, 50, 50);
-        // stroke(255);
-        
-        // CODE FOR THE RED DOTS INSIDE THE RADAR.
-        fill(255,0,0);
-        noStroke();
-        circleC = circleC + random((float) -0.1, (float) 0.1);
-        ellipse(circleC, 680, 10,10);
-        circleC2= circleC2 + random((float) -0.09, (float) 0.05);
-        ellipse(circleC2, 700, 10,10);
-        circleC2= circleC2+ random((float) -0.02, (float) 0.04);
-        ellipse(circleC3, 750, 10,10);
-
-
-
-
-        
+        dash.radardots();
+                    
         if (checkKey(LEFT))
         {
             System.out.println("Left arrow key pressed");
