@@ -13,6 +13,7 @@ public class UI extends PApplet
     float circleC2;
     float circleC3;
     PImage img;
+    PImage moon;
     Bar bar;
   
 
@@ -51,6 +52,7 @@ public void setup()
         dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear",width / 2f,width /2f,width/2f);
         bar = new Bar(this, width/4, height/2 + 230);
         img = loadImage("cfiber.jpg");
+        moon = loadImage("Capture.PNG");
         
 
         
@@ -73,6 +75,7 @@ public void setup()
        // b.render();
         mc.update();
         mc.render();
+        image(moon,0,0);
         s.render();
         image(img,0,598);
         radar.update();
@@ -85,8 +88,8 @@ public void setup()
         bar.update();
         bar.render();
         dash.gauge();
-        // bar.update();
-        // bar.render();
+
+
        
        
        //FOWARDS BACKWARDS CODE

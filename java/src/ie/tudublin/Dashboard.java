@@ -61,24 +61,29 @@ void buttons()
     ui.text("1", 325, 615, 30);
     ui.text("2", 425, 615, 30);
     ui.text("3", 525, 615, 30);
+
 }
 
 void radardots()
 {
    ui.fill(255,0,0);
     ui.noStroke();
-    ui.circleC = ui.circleC + random((float) -0.1, (float) 0.1);
+    ui.circleC = ui.circleC += random(-4, 4);
     ui.ellipse(ui.circleC, 680, 10,10);
     ui.circleC2= ui.circleC2 + random((float) -1, (float) 1);
     ui.ellipse(ui.circleC2, 700, 10,10);
     ui.circleC2=ui.circleC2+ random((float) -0.02, (float) 0.04);
     ui.ellipse(ui.circleC3, 750, 10,10);  
 }
+
+//CODE FOR FUEL GUAGE
 void gauge()
 {
     ui.fill(255,90,0);
     ui.stroke(0,0,0);
-    ui.line(1170, 620, 1170, 785);
+    ui.line(1170, 620, 1170, 800);
+    ui.line(1100, 620, 1100, 800);
+    //ui.rect(1100, 590, 70, 300);
   //  int gridSize = 5;
    // float w = width / gridSize - 20;		
     // Nested loop
@@ -95,8 +100,9 @@ void gauge()
     for (int i = 620; i < 1000; i = i+20) {
 
         ui.line(1170, i, 1100, i);
-        ui.stroke(255,255,255);
+        ui.stroke(0);
       
+        //ui.rect(1100, 590, 70, 300);
       }
 }
 

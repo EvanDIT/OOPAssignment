@@ -21,11 +21,8 @@ public class Bar
     public void render()
     {
         ui.noStroke();
-        ui.fill(255,0,0);
+        ui.fill(89,218,42);
         ui.rect(1100, y , 72, 200);
-        ui.stroke(255,0,0);
-        ui.line(1100,620,402,77);
-        ui.stroke(255,0,0);
         // Static field
         
 
@@ -34,7 +31,7 @@ public class Bar
     public void update()
     {
         y += dx;
-        if ((y > ui.height - 40) || (y < 620))
+        if ((y > ui.height - 30) || (y < 620))
         {
             dx *= -1;
         }
