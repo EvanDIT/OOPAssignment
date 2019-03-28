@@ -13,6 +13,7 @@ public class UI extends PApplet
     float circleC2;
     float circleC3;
     PImage img;
+    Bar bar;
   
 
     boolean[] keys = new boolean[1024];
@@ -48,7 +49,10 @@ public void setup()
         s = new Ship(this,width,height);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
         dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear",width / 2f,width /2f,width/2f);
+        bar = new Bar(this, width/2, height/2,200);
         img = loadImage("cfiber.jpg");
+        
+
         
     
         //Circles for Radar
@@ -78,7 +82,11 @@ public void setup()
         dash.radardots();
         dash.buttons();
         dash.radardots();
+        bar.update();
+        bar.render();
         dash.gauge();
+        // bar.update();
+        // bar.render();
        
        
        //FOWARDS BACKWARDS CODE

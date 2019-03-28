@@ -79,8 +79,8 @@ void gauge()
     ui.fill(255,90,0);
     ui.stroke(0,0,0);
     ui.line(1170, 620, 1170, 785);
-    int gridSize = 5;
-    float w = width / gridSize - 20;		
+  //  int gridSize = 5;
+   // float w = width / gridSize - 20;		
     // Nested loop
     // for(int i = 0 ; i < gridSize ; i ++)
     // {
