@@ -1,6 +1,7 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class UI extends PApplet
 {
@@ -11,6 +12,7 @@ public class UI extends PApplet
     float circleC;
     float circleC2;
     float circleC3;
+    PImage img;
   
 
     boolean[] keys = new boolean[1024];
@@ -40,11 +42,13 @@ public class UI extends PApplet
     
 public void setup()
     {
+        
         b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 100);
         s = new Ship(this,width,height);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
         dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear",width / 2f,width /2f,width/2f);
+        img = loadImage("cfiber.jpg");
     
         //Circles for Radar
         circleC = width / 2;
@@ -61,11 +65,15 @@ public void setup()
         mc.update();
         mc.render();
         s.render();
+        image(img,0,598);
         radar.update();
         radar.render();
         dash.render();
         dash.buttons();
         dash.radardots();
+        dash.buttons();
+        dash.radardots();
+       // image(img,0,400);
        
        
        //FOWARDS BACKWARDS CODE
