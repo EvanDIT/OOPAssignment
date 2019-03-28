@@ -49,7 +49,7 @@ public void setup()
         s = new Ship(this,width,height);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
         dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear",width / 2f,width /2f,width/2f);
-        bar = new Bar(this, width/2, height/2,200);
+        bar = new Bar(this, width/4, height/2 + 230);
         img = loadImage("cfiber.jpg");
         
 

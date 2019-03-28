@@ -5,27 +5,27 @@ package ie.tudublin;
 public class Bar
 {
     private float x;
-    private float dx = 0.8f;
+    private float dx = 0.2f;
     private float y;
-    private float diameter;
-    private float radius;
+
     UI ui;
 
-    public Bar(UI ui, float x, float y, float diameter)
+    public Bar(UI ui, float x, float y)
     {
         this.ui = ui;
         this.x = x;
         this.y = y;
-        this.diameter = diameter;
-        radius = diameter / 4;
+
     }
     
     public void render()
     {
         ui.noStroke();
         ui.fill(255,0,0);
-        ui.rect(1100, y , 72, 150);
-        ui.fill(180,30,22);
+        ui.rect(1100, y , 72, 200);
+        ui.stroke(255,0,0);
+        ui.line(1100,620,402,77);
+        ui.stroke(255,0,0);
         // Static field
         
 
@@ -34,7 +34,7 @@ public class Bar
     public void update()
     {
         y += dx;
-        if ((y > ui.height- radius + 40) || (y < radius + 525))
+        if ((y > ui.height - 40) || (y < 620))
         {
             dx *= -1;
         }
