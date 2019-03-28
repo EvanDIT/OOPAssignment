@@ -49,6 +49,7 @@ public void setup()
         radar = new Radar(this, 1, width / 2, height / 2, 100);
         dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear",width / 2f,width /2f,width/2f);
         img = loadImage("cfiber.jpg");
+        
     
         //Circles for Radar
         circleC = width / 2;
@@ -58,6 +59,10 @@ public void setup()
 
     
     Radar radar;
+	public Object y;
+	public Object x;
+	public float z;
+   
     public void draw()
     {
         background(0);   
@@ -73,7 +78,7 @@ public void setup()
         dash.radardots();
         dash.buttons();
         dash.radardots();
-       // image(img,0,400);
+        dash.gauge();
        
        
        //FOWARDS BACKWARDS CODE

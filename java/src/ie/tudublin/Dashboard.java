@@ -25,11 +25,11 @@ public Dashboard(UI ui, float x, float y, float width, float height, String text
 public void render()
 {
 // CODE FOR LANDING GEAR BUTTON
-int leftside = 300;
-int leftmiddle = 330;
-int topleft = 650;
-int leftmiddletop = 680;
-int leftsidebottom = 750;
+    int leftside = 300;
+    int leftmiddle = 330;
+    int topleft = 650;
+    int leftmiddletop = 680;
+    int leftsidebottom = 750;
     ui.stroke(255,0,0);
     ui.fill(255,100,0);
     ui.rect(x , y , width, height);
@@ -69,11 +69,37 @@ void radardots()
     ui.noStroke();
     ui.circleC = ui.circleC + random((float) -0.1, (float) 0.1);
     ui.ellipse(ui.circleC, 680, 10,10);
-    ui.circleC2= ui.circleC2 + random((float) -0.09, (float) 0.05);
+    ui.circleC2= ui.circleC2 + random((float) -1, (float) 1);
     ui.ellipse(ui.circleC2, 700, 10,10);
     ui.circleC2=ui.circleC2+ random((float) -0.02, (float) 0.04);
     ui.ellipse(ui.circleC3, 750, 10,10);  
 }
+void gauge()
+{
+    ui.fill(255,90,0);
+    ui.stroke(0,0,0);
+    ui.line(1170, 620, 1170, 785);
+    int gridSize = 5;
+    float w = width / gridSize - 20;		
+    // Nested loop
+    // for(int i = 0 ; i < gridSize ; i ++)
+    // {
+    //     for(int j = 0 ; j < gridSize ; j ++)
+    //     {
+    //         //float x = i * w + w;
+    //         float y = j * w + w;
+
+    //         ui.rect(1170, y, w, w);
+    //     }
+    // }   
+    for (int i = 620; i < 1000; i = i+20) {
+
+        ui.line(1170, i, 1100, i);
+        ui.stroke(255,255,255);
+      
+      }
+}
+
 
     private float random(float f, float g) {
         return 0;
