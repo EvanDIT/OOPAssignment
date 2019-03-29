@@ -49,7 +49,7 @@ public void setup()
         mc = new MovingCircle(this, width / 2, height / 2, 100);
         s = new Ship(this,width,height);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
-        dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear",width / 2f,width /2f,width/2f);
+        dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear");
         bar = new Bar(this, width/4, height/2 + 230);
         img = loadImage("cfiber.jpg");
         moon = loadImage("Capture.PNG");
@@ -80,14 +80,19 @@ public void setup()
         image(img,0,598);
         radar.update();
         radar.render();
+        radar.radardots();
         dash.render();
         dash.buttons();
-        dash.radardots();
         dash.buttons();
-        dash.radardots();
         bar.update();
         bar.render();
         dash.gauge();
+
+        if (mouseX>200 && mouseX < 200+100 && 
+        mouseY>150 && mouseY < 150+100) 
+        fill(170); 
+        else
+        fill(232,287,146);
 
 
        

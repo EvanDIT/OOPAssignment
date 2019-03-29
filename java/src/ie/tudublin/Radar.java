@@ -41,6 +41,20 @@ public class Radar
         ui.line(pos.x, pos.y + 300, x2, y2); //Moving line 
         
     }
+    void radardots()
+{
+   ui.fill(255,0,0);
+    ui.noStroke();
+   
+    ui.circleC = ui.circleC += ui.random(-1,1);
+    ui.ellipse(ui.circleC, 680, 10,10);
+   
+    ui.circleC2= ui.circleC2 += ui.random(-1,1);
+    ui.ellipse(ui.circleC2, 700, 10,10);
+   
+    ui.circleC2=ui.circleC2 += ui.random(-1,1);
+    ui.ellipse(pos.x, -30 + ui.circleC2, 10,10);  
+}
 
     float timeDelta = 1.0f / 60.0f;
 

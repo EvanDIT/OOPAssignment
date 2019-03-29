@@ -12,7 +12,7 @@ private float width;
 private float height;
 private String text;
 
-public Dashboard(UI ui, float x, float y, float width, float height, String text,float circleC,float circleC2,float circleC3)
+public Dashboard(UI ui, float x, float y, float width, float height, String text)
 {
     this.ui = ui;
     this.x = x;
@@ -64,18 +64,6 @@ void buttons()
 
 }
 
-void radardots()
-{
-   ui.fill(255,0,0);
-    ui.noStroke();
-    ui.circleC = ui.circleC += random(-4, 4);
-    ui.ellipse(ui.circleC, 680, 10,10);
-    ui.circleC2= ui.circleC2 + random((float) -1, (float) 1);
-    ui.ellipse(ui.circleC2, 700, 10,10);
-    ui.circleC2=ui.circleC2+ random((float) -0.02, (float) 0.04);
-    ui.ellipse(ui.circleC3, 750, 10,10);  
-}
-
 //CODE FOR FUEL GUAGE
 void gauge()
 {
@@ -105,11 +93,7 @@ void gauge()
         //ui.rect(1100, 590, 70, 300);
       }
 }
-
-
-    private float random(float f, float g) {
-        return 0;
-    }
-
 }
+
+
 
