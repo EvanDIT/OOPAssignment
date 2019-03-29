@@ -31,7 +31,7 @@ public void render()
     int topleft = 650;
     int leftmiddletop = 680;
     int leftsidebottom = 750;
-    ui.stroke(255,0,0);
+    ui.stroke(0);
     ui.fill(255,100,0);
     if (ui.mousePressed == true) {
         ui.fill(107,142,35); 
@@ -45,7 +45,7 @@ public void render()
     ui.line(leftmiddle,720,(leftside + width) -30,720); // botttom horz line
     ui.line(leftmiddle,leftmiddletop,(leftside + width) - 30,leftmiddletop); // Top Horz Line
     ui.line((leftside + width) - 30,720,(leftside + width)-30,leftmiddletop); //right vert line
-    ui.fill(255,255,10);
+    ui.fill(0);
     ui.textAlign(PApplet.CENTER, PApplet.CENTER);
     ui.text(text, x + width * 0.5f, y + height * 0.5f);
 }

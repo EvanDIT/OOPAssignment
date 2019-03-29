@@ -4,16 +4,14 @@ package ie.tudublin;
 
 public class Bar
 {
-    private float x;
     private float dx = 0.2f;
     private float y;
 
     UI ui;
 
-    public Bar(UI ui, float x, float y)
+    public Bar(UI ui,float y)
     {
         this.ui = ui;
-        this.x = x;
         this.y = y;
 
     }
