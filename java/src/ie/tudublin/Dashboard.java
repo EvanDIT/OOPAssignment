@@ -5,7 +5,9 @@ import processing.core.PApplet;
 public class Dashboard
 {
 
-UI ui;
+    private static final int LEFT = 0;
+    private static final int RIGHT = 0;
+    UI ui;
 private float x;
 private float y;
 private float width;
@@ -32,6 +34,20 @@ public void render()
     int leftsidebottom = 750;
     ui.stroke(255,0,0);
     ui.fill(255,100,0);
+    
+
+	
+
+  
+    if (ui.mousePressed == true) {
+      if (ui.mouseButton == LEFT) {
+        ui.fill(0); // Black
+      } else if (ui.mouseButton == RIGHT) { 
+        ui.fill(255); // White
+      }
+    } else {
+      ui.fill(126); // Gray
+    }
     ui.rect(x , y , width, height);
     ui.line(leftside,topleft,leftmiddle,leftmiddletop);
     ui.line(leftside,leftsidebottom,leftmiddle,720);

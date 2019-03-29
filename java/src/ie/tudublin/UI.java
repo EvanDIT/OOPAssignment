@@ -88,15 +88,6 @@ public void setup()
         bar.render();
         dash.gauge();
 
-        if (mouseX>200 && mouseX < 200+100 && 
-        mouseY>150 && mouseY < 150+100) 
-        fill(170); 
-        else
-        fill(232,287,146);
-
-
-       
-       
        //FOWARDS BACKWARDS CODE
         stroke(0);
         line(920, 700, 1020, 700);
