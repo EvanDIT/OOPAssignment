@@ -25,7 +25,7 @@ public Dashboard(UI ui, float x, float y, float width, float height, String text
 
 public void render()
 {
-// CODE FOR LANDING GEAR BUTTON
+// CODE FOR FIREBUTTON BUTTON
     int leftside = 300;
     int leftmiddle = 330;
     int topleft = 650;

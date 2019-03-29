@@ -32,5 +32,10 @@ public class Aim
         ui.line(ui.mouseX -75, ui.mouseY, 0, 0);
         ui.line(ui.mouseX  + 75, ui.mouseY, 1520, 0);
 
+        ui.line(ui.mouseX +  75, ui.mouseY, 1520,595);
+        ui.line(ui.mouseX -  75, ui.mouseY, 0,595);
+
+
+
     }
 }

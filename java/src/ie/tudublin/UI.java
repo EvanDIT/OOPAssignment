@@ -50,7 +50,7 @@ public void setup()
         mc = new MovingCircle(this, width / 2, height / 2, 100);
         s = new Ship(this,1516,595,200);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
-        dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear");
+        dash = new Dashboard(this, 300, 650, 250, 100, "Fire");
         bar = new Bar(this, height/2 + 230);
         a = new Aim(this, mouseX, mouseY, 100, 100);
         img = loadImage("cfiber.jpg");
