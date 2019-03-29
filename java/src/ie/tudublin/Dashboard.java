@@ -5,9 +5,8 @@ import processing.core.PApplet;
 public class Dashboard
 {
 
-    private static final int LEFT = 0;
-    private static final int RIGHT = 0;
-    UI ui;
+
+UI ui;
 private float x;
 private float y;
 private float width;

@@ -3,25 +3,21 @@ package ie.tudublin;
 public class Ship
 {
     UI ui;
-    private int height;
-	private int width;
+    private int screenwidth;
+	private int rectdown;
+	private int gap;
 
-public Ship(UI ui,int height,int width)
+public Ship(UI ui,int screenwidth, int rectdown,int gap)
 {
     this.ui = ui;
-    this.width = width;
-    this.height = height;
+	this.screenwidth = screenwidth;
+	this.rectdown = rectdown;
+	this.gap = gap;
 }
 	
 
 public void render()
 {	
-
-	int screenwidth = 1516;
-	int rectdown = 595;
-	int gap = 200;
-
-
 	ui.stroke(47,79,79);
 	ui.strokeWeight(5);
 	ui.fill(105,105,105);

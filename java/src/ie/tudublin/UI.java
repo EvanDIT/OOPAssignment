@@ -47,7 +47,7 @@ public void setup()
         
         b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 100);
-        s = new Ship(this,width,height);
+        s = new Ship(this,1516,595,200);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
         dash = new Dashboard(this, 300, 650, 250, 100, "Landing Gear");
         bar = new Bar(this, width/4, height/2 + 230);
