@@ -34,20 +34,9 @@ public void render()
     int leftsidebottom = 750;
     ui.stroke(255,0,0);
     ui.fill(255,100,0);
-    
-
-	
-
-  
     if (ui.mousePressed == true) {
-      if (ui.mouseButton == LEFT) {
-        ui.fill(0); // Black
-      } else if (ui.mouseButton == RIGHT) { 
-        ui.fill(255); // White
-      }
-    } else {
-      ui.fill(126); // Gray
-    }
+        ui.fill(107,142,35); 
+    } 
     ui.rect(x , y , width, height);
     ui.line(leftside,topleft,leftmiddle,leftmiddletop);
     ui.line(leftside,leftsidebottom,leftmiddle,720);
