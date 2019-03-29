@@ -75,8 +75,8 @@ public void setup()
     {
         background(0);   
        // b.render();
-        mc.update();
-        mc.render();
+       // mc.update();
+        //mc.render();
         image(moon,0,0);
         a.render();
         s.render();

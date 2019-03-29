@@ -32,7 +32,7 @@ public void render()
     int leftmiddletop = 680;
     int leftsidebottom = 750;
     ui.stroke(0);
-    ui.fill(255,100,0);
+    ui.fill(255,0,0);
     if (ui.mousePressed == true) {
         ui.fill(107,142,35); 
     } 
