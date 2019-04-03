@@ -52,9 +52,14 @@ public void setup()
         radar = new Radar(this, 1, width / 2, height / 2, 100);
         dash = new Dashboard(this, 300, 650, 250, 100, "Fire");
         bar = new Bar(this, height/2 + 230);
-        a = new Aim(this, mouseX, mouseY, 100, 100);
+        // a = new Aim(this, mouseX, mouseY, 150, 150);
+        // a = new Aim(this, mouseX, mouseY, 100, 100);
+        // a = new Aim(this, mouseX, mouseY, 20, 20);
         img = loadImage("cfiber.jpg");
         moon = loadImage("Capture.PNG");
+        a = new Aim(this, mouseX, mouseY, 150, 150);
+        a = new Aim(this, mouseX, mouseY, 100, 100);
+        a = new Aim(this, mouseX, mouseY, 20, 20);
         
 
         
@@ -81,6 +86,7 @@ public void setup()
         a.render();
         s.render();
         image(img,0,598);
+        a.render();
         radar.update();
         radar.render();
         radar.radardots();
@@ -89,42 +95,9 @@ public void setup()
         bar.update();
         bar.render();
         dash.gauge();
-        
-
-       //FOWARDS BACKWARDS CODE
-        stroke(0);
-        line(920, 700, 1020, 700);
-        int y = 720;
-        if (key == CODED) {
-        if (keyCode == UP) {
-             y = 640;
-             fill(107,142,35);
-         } else if (keyCode == DOWN) {
-            y = 720;
-            fill(255,0,0);
-         }
-             } else {
-              y = 680;
-              fill(255,140,0);
-            }
-        rect(920, y, 100, 45);
-        textSize(20);
-        fill(0,0,0);
-        text("Foward", 970, 660, 30);
-        text("Reverse", 970, 740, 30);
-        stroke(0);
-        line(910,620,1030,620);
-        line(910,785,1030,785);
-
+        dash.forwardbackward();
 }
                     
-    //     if (checkKey(LEFT))
-    //     {
-    //         System.out.println("Left arrow key pressed");
-    //     }
-    // }
-
-
 	public void ellipse(Object mouseX, Object mouseY, float f, double d) {
 	}
 

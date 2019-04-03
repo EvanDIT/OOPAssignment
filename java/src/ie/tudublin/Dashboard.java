@@ -97,6 +97,33 @@ void gauge()
         //ui.rect(1100, 590, 70, 300);
       }
 }
+
+void forwardbackward()
+{
+    ui.stroke(0);
+    ui.line(920, 700, 1020, 700);
+    int y = 720;
+    if (ui.key == ui.CODED) {
+    if (ui.keyCode == ui.UP) {
+         y = 640;
+         ui.fill(107,142,35);
+     } else if (ui.keyCode == ui.DOWN) {
+        y = 720;
+        ui.fill(255,0,0);
+     }
+         } else {
+          y = 680;
+          ui.fill(255,140,0);
+        }
+    ui.rect(920, y, 100, 45);
+    ui.textSize(20);
+    ui.fill(0,0,0);
+    ui.text("Foward", 970, 660, 30);
+    ui.text("Reverse", 970, 740, 30);
+    ui.stroke(0);
+    ui.line(910,620,1030,620);
+    ui.line(910,785,1030,785);
+}
 }
 
 
