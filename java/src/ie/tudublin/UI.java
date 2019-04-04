@@ -93,7 +93,7 @@ public class UI extends PApplet {
 
             x[i] = x[i] - speed[i];
             if (x[i] < 0) {
-                x[i] = width;
+                x[i] = width / 2;
             }
             i = i + 2;
         }
