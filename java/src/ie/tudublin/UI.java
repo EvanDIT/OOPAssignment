@@ -94,6 +94,8 @@ public class UI extends PApplet {
             if (keyCode == UP) {
             x[i] = x[i] - speed[i];
             }
+            else
+            x[i] = x[i] - speed[i] / 3;
             if (x[i] < 0) {
                 x[i] = width / 2; //Spawn In The Middle, Wrap From Middle.
             }
