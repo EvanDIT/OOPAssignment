@@ -22,7 +22,9 @@ public class UI extends PApplet {
     // 3 Arrays for the moving star field
     float[] x = new float[150];
     float[] y = new float[150];
-    float[] speed = new float[500];
+    float[] speed = new float[250];
+ 
+
 
     boolean[] keys = new boolean[1024];
 
@@ -68,10 +70,9 @@ public class UI extends PApplet {
         while (i < 150) {
             x[i] = random(0, width);
             y[i] = random(0, height);
-            speed[i] = random(1, 10);
+            speed[i] = random(1,10);
             i = i + 1;
         }
-        
     }
 
     Radar radar;
@@ -90,13 +91,21 @@ public class UI extends PApplet {
             strokeWeight(1);
             fill(255);
             ellipse(x[i], y[i], 10, 10);
-
+            if (keyCode == UP) {
             x[i] = x[i] - speed[i];
-            if (x[i] < 0) {
-                x[i] = width / 2;
             }
-            i = i + 2;
-        }
+            if (x[i] < 0) {
+                x[i] = width / 2; //Spawn In The Middle, Wrap From Middle.
+            }
+            i = i + 1;
+        
+
+            // x[i] = x[i] - speed[i];
+            // if (x[i] < 0) {
+            //     x[i] = width / 2; //Spawn In The Middle, Wrap From Middle.
+            // }
+            // i = i + 1;
+    }
 
         if (mousePressed == true && (mouseButton == LEFT)) {
             strokeWeight(20);
