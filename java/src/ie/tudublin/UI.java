@@ -1,7 +1,5 @@
 package ie.tudublin;
 
-
-
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -20,9 +18,10 @@ public class UI extends PApplet {
 
 
     // 3 Arrays for the moving star field
-    float[] x = new float[150];
-    float[] y = new float[150];
+    float[] x = new float[100];
+    float[] y = new float[100];
     float[] speed = new float[250];
+ 
  
 
 
@@ -67,12 +66,14 @@ public class UI extends PApplet {
 
         // Moving Stars
         int i = 0;
-        while (i < 150) {
-            x[i] = random(0, width);
-            y[i] = random(0, height);
-            speed[i] = random(1,10);
+        while (i < 100) {
+            x[i] = random(0, width); //X Stars are given a random location on the x axis.
+            y[i] = random(0, height);// When Y stars are created they are given a random location on the y axis.
+            speed[i] = random(1,10);//Speed is random between  1 and 10.
             i = i + 1;
         }
+
+        
     }
 
     Radar radar;
@@ -86,29 +87,23 @@ public class UI extends PApplet {
 
         // For the Moving Star Field
         int i = 0;
-        while (i < 150) {
+        while (i < 100) {
             stroke(255, 255, 0);
             strokeWeight(1);
             fill(255);
             ellipse(x[i], y[i], 10, 10);
-            if (keyCode == UP) {
-            x[i] = x[i] - speed[i];
+        if (keyCode == UP) {
+            x[i] = x[i] - speed[i]; //Stars Going right to left 
             }
-            else
-            x[i] = x[i] - speed[i] / 3;
-            if (x[i] < 0) {
-                x[i] = width / 2; //Spawn In The Middle, Wrap From Middle.
+        else
+            x[i] = x[i] - speed[i] / 3; //Stars going from right to left.
+         if (x[i] < 0) { //If left boarder is reached then wrap around
+            x[i] = width / 2; //Spawn In The Middle, Wrap From Middle.
             }
             i = i + 1;
-        
-
-            // x[i] = x[i] - speed[i];
-            // if (x[i] < 0) {
-            //     x[i] = width / 2; //Spawn In The Middle, Wrap From Middle.
-            // }
-            // i = i + 1;
     }
 
+        // Code To Have A Flash When Shooting
         if (mousePressed == true && (mouseButton == LEFT)) {
             strokeWeight(20);
             ellipse(mouseX, mouseY, 20, 20);
@@ -121,7 +116,6 @@ public class UI extends PApplet {
         a.render();
         s.render();
         image(img,0,598);
-        //a.render();
         radar.update();
         radar.render();
         radar.radardots();
@@ -131,6 +125,7 @@ public class UI extends PApplet {
         bar.render();
         dash.gauge();
         dash.forwardbackward();
+        dash.counter();
         
 }
                     

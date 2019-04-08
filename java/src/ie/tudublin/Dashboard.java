@@ -124,6 +124,22 @@ void forwardbackward()
     ui.line(910,620,1030,620);
     ui.line(910,785,1030,785);
 }
+void counter()
+    {
+        String status = "Reverse";
+        if (ui.key == ui.CODED) {
+            if (ui.keyCode == ui.UP) {
+                status = "Light Speed";
+            }
+            ui.textSize(25);
+            ui.fill(255,0,0);
+            ui.text("Status : " + status,ui.width/2,570,20);
+        }else status = "Cruise Control";
+        ui.textSize(25);
+        ui.fill(255,0,0);
+        ui.text("Status : " + status,ui.width/2,570,20);
+
+}
 }
 
 
