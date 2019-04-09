@@ -45,10 +45,13 @@ public class Aim
 
        
         ui.pushMatrix();
-        rotateval += 0.2;
+        rotateval += 0.005;
         ui.width = 1520;
         ui.translate(ui.mouseX, ui.mouseY);
         ui.rotate(rotateval);
+        if (ui.mousePressed == true) {
+            ui.rotate(rotateval * 100); 
+        }
         ui.fill(0,0,255);
         ui.noStroke();
         ui.ellipse(50,0, 50,5);
