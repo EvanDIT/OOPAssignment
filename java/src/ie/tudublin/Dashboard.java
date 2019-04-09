@@ -62,9 +62,9 @@ void buttons()
     ui.rect(x, 605, 50,30);
     }
     ui.fill(0);
-    ui.text("1", 325, 615, 30);
-    ui.text("2", 425, 615, 30);
-    ui.text("3", 525, 615, 30);
+    ui.text("1", 325, 615, 30); //1 text for the frst button
+    ui.text("2", 425, 615, 30); //2 text for the frst button
+    ui.text("3", 525, 615, 30); //3 text for the frst button
 
 }
 
@@ -83,22 +83,23 @@ void gauge()
       }
 }
 
+//Drawing the Foward Backwards Knob. Controlled using up and down keys.
 void forwardbackward()
 {
     ui.stroke(0);
     ui.line(920, 700, 1020, 700);
     int y = 720;
-    if (ui.key == ui.CODED) {
-    if (ui.keyCode == ui.UP) {
+    if (ui.key == ui.CODED) { 
+    if (ui.keyCode == ui.UP) { //if up is pressed set the y location to be 640 pixels.
          y = 640;
-         ui.fill(107,142,35);
-     } else if (ui.keyCode == ui.DOWN) {
+         ui.fill(107,142,35); // and set it to be green.
+     } else if (ui.keyCode == ui.DOWN) { //if the down is pressed set the y location to be 720 pixels.
         y = 720;
-        ui.fill(255,0,0);
+        ui.fill(255,0,0); //and set it to be red
      }
-         } else {
-        y = 680;
-        ui.fill(255,140,0);
+         } else { //if neither is pressed
+        y = 680; //set the y value to be center of the knob
+        ui.fill(255,140,0); //and fill it with an orange colour.
         }
     ui.rect(920, y, 100, 45);
     ui.textSize(20);
@@ -112,15 +113,15 @@ void forwardbackward()
 //To Show Status of Speed.
 void counter()
     {
-        String status = "Reverse";
+        String status = "Reverse"; //if in reverse, "Reverse" is displayed.
         if (ui.key == ui.CODED) {
-            if (ui.keyCode == ui.UP) {
+            if (ui.keyCode == ui.UP) { //if up is pressed the status will display "light speed"
                 status = "Light Speed";
             }
             ui.textSize(25);
             ui.fill(255,0,0);
             ui.text("Status : " + status,ui.width/2,570,20);
-        }else status = "Cruise Control";
+        }else status = "Cruise Control"; //else it will display "Cruise Control" when in the center.
         ui.textSize(25);
         ui.fill(255,0,0);
         ui.text("Status : " + status,ui.width/2,570,20);

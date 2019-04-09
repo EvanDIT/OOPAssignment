@@ -15,7 +15,7 @@ public class Bar
         this.y = y;
 
     }
-    
+    // Drawing the moving bar on the right hand side.
     public void render()
     {
         ui.noStroke();
@@ -26,6 +26,7 @@ public class Bar
 
     }
 
+    // Moving Bar On The Right Hand Side
     public void update()
     {
         y += dx;

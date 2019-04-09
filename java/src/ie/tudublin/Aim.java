@@ -17,7 +17,7 @@ public class Aim
     //     this.width = width;
     //     this.height = height;
      }
-
+     float rotateval = 0.0f;
     public void render()
     {
          int diameter = 150;
@@ -42,5 +42,20 @@ public class Aim
         //Bottom Lines
         ui.line(ui.mouseX +  75, ui.mouseY, 1520,595);
         ui.line(ui.mouseX -  75, ui.mouseY, 0,595);
+
+       
+        ui.pushMatrix();
+        rotateval += 0.2;
+        ui.width = 1520;
+        ui.translate(ui.mouseX, ui.mouseY);
+        ui.rotate(rotateval);
+        ui.fill(0,0,255);
+        ui.noStroke();
+        ui.ellipse(50,0, 50,5);
+        ui.ellipse(0,50, 5,50);
+        ui.ellipse(-50,0, 50,5);
+        ui.ellipse(0,-50, 5,50);
+
+        ui.popMatrix();
     }
 }

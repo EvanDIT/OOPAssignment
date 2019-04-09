@@ -15,7 +15,7 @@ public Ship(UI ui,int screenwidth, int rectdown,int gap)
 	this.gap = gap;
 }
 	
-
+//Drawing the Ships outline for the dash and window.
 public void render()
 {	
 	ui.stroke(47,79,79);
