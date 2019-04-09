@@ -41,8 +41,6 @@ public class UI extends PApplet {
 
     public void settings() {
         size(1520, 800);
-        // Use fullscreen instead of size to make your interface fullscreen
-        // fullScreen();
     }
 
     public void setup() {
@@ -58,11 +56,6 @@ public class UI extends PApplet {
         a = new Aim(this);
         a = new Aim(this);
         a = new Aim(this);
-
-        // Circles for Radar
-        circleC = width / 2;
-        circleC2 = (float) (width / 2);
-        circleC3 = (float) (width / 2);
 
         // Moving Stars
         int i = 0;

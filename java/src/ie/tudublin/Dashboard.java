@@ -57,9 +57,9 @@ void buttons()
     int gridSize = 3;	
     for(int i = 0 ; i < gridSize ; i ++)
     {
-        float x = i * 100 + 300;
-        ui.fill(255,225,10);           
-        ui.rect(x, 605, 50,30);
+    float x = i * 100 + 300;
+    ui.fill(255,225,10);           
+    ui.rect(x, 605, 50,30);
     }
     ui.fill(0);
     ui.text("1", 325, 615, 30);
@@ -75,26 +75,11 @@ void gauge()
     ui.stroke(0,0,0);
     ui.line(1170, 620, 1170, 800);
     ui.line(1100, 620, 1100, 800);
-    //ui.rect(1100, 590, 70, 300);
-  //  int gridSize = 5;
-   // float w = width / gridSize - 20;		
-    // Nested loop
-    // for(int i = 0 ; i < gridSize ; i ++)
-    // {
-    //     for(int j = 0 ; j < gridSize ; j ++)
-    //     {
-    //         //float x = i * w + w;
-    //         float y = j * w + w;
 
-    //         ui.rect(1170, y, w, w);
-    //     }
-    // }   
     for (int i = 620; i < 1000; i = i+20) {
 
         ui.line(1170, i, 1100, i);
         ui.stroke(0);
-      
-        //ui.rect(1100, 590, 70, 300);
       }
 }
 
@@ -112,8 +97,8 @@ void forwardbackward()
         ui.fill(255,0,0);
      }
          } else {
-          y = 680;
-          ui.fill(255,140,0);
+        y = 680;
+        ui.fill(255,140,0);
         }
     ui.rect(920, y, 100, 45);
     ui.textSize(20);
@@ -124,6 +109,7 @@ void forwardbackward()
     ui.line(910,620,1030,620);
     ui.line(910,785,1030,785);
 }
+//To Show Status of Speed.
 void counter()
     {
         String status = "Reverse";
