@@ -50,6 +50,9 @@ public class Radar
     rotateval += 0.010;
     ui.width = 1520;
     ui.translate(ui.width/2, 680);
+    if (ui.keyCode == ui.UP) {
+        rotateval +=-0.5;
+    }
     ui.rotate(rotateval);
     ui.fill(255,0,0);
     ui.noStroke();
@@ -60,6 +63,9 @@ public class Radar
     rotateval2 += 0.02;
     ui.width = 1520;
     ui.translate(ui.width/2, 690);
+    if (ui.keyCode == ui.UP) {
+        rotateval2 +=-0.5;
+    }
     ui.rotate(rotateval2);
     ui.fill(255,0,0);
     ui.noStroke();
@@ -70,6 +76,9 @@ public class Radar
     rotateval3 += -0.010;
     ui.width = 1520;
     ui.translate(ui.width/2, 680);
+    if (ui.keyCode == ui.UP) {
+        rotateval3 +=-0.5;
+    }
     ui.rotate(rotateval3);
     ui.fill(255,0,0);
     ui.noStroke();
