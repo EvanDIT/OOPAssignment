@@ -67,7 +67,7 @@ public class UI extends PApplet {
         // Moving Stars
         int i = 0;
         while (i < 100) {
-            x[i] = random(0, width); //X Stars are given a random location on the x axis.
+            x[i] = random(0, width / 2); //X Stars are given a random location on the x axis.
             y[i] = random(0, height);// When Y stars are created they are given a random location on the y axis.
             speed[i] = random(1,10);//Speed is random between  1 and 10.
             i = i + 1;
@@ -77,6 +77,7 @@ public class UI extends PApplet {
     }
 
     Radar radar;
+	public double rotateval;
 
     public void draw() {
         background(0);
@@ -89,7 +90,7 @@ public class UI extends PApplet {
         int i = 0;
         while (i < 100) {
             stroke(255, 255, 0);
-            strokeWeight(1);
+            strokeWeight(2);
             fill(255);
             ellipse(x[i], y[i], 10, 10);
         if (keyCode == UP) {
@@ -98,7 +99,7 @@ public class UI extends PApplet {
         else
             x[i] = x[i] - speed[i] / 3; //Stars going from right to left.
          if (x[i] < 0) { //If left boarder is reached then wrap around
-            x[i] = width / 2; //Spawn In The Middle, Wrap From Middle.
+            x[i] = width /2; //Spawn In The Middle, Wrap From Middle.
             }
             i = i + 1;
     }

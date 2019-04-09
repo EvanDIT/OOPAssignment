@@ -41,19 +41,25 @@ public class Radar
         ui.line(pos.x, pos.y + 300, x2, y2); //Moving line 
         
     }
+    float rotateval = 0.0f;
     void radardots()
 {
-   ui.fill(255,0,0);
-    ui.noStroke();
+    ui.pushMatrix();
+    rotateval += 0.05;
+    ui.width = 1520;
+    ui.translate(ui.width/2, 680);
+    ui.rotate(rotateval);
+    ui.ellipse(40, 20, 20,20);
+// ui.line(ui.width/2,0 , 18, 10);
+    // ui.circleC = ui.circleC += ui.random(-1,1);
+    // ui.ellipse(ui.circleC, 680, 10,10);
    
-    ui.circleC = ui.circleC += ui.random(-1,1);
-    ui.ellipse(ui.circleC, 680, 10,10);
+    // ui.circleC2= ui.circleC2 += ui.random(-1,1);
+    // ui.ellipse(ui.circleC2, 700, 10,10);
    
-    ui.circleC2= ui.circleC2 += ui.random(-1,1);
-    ui.ellipse(ui.circleC2, 700, 10,10);
-   
-    ui.circleC2=ui.circleC2 += ui.random(-1,1);
-    ui.ellipse(pos.x, -30 + ui.circleC2, 10,10);  
+    // ui.circleC2=ui.circleC2 += ui.random(-1,1);
+    // ui.ellipse(pos.x, -30 + ui.circleC2, 10,10);  
+    ui.popMatrix();
 }
 
     float timeDelta = 1.0f / 60.0f;
