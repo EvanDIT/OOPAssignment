@@ -21,6 +21,9 @@ public class UI extends PApplet {
     float[] x = new float[100];
     float[] y = new float[100];
     float[] speed = new float[250];
+    float[] x2 = new float[100];
+    float[] y2 = new float[100];
+    float[] speed2 = new float[250];
  
  
 
@@ -66,6 +69,14 @@ public class UI extends PApplet {
             i = i + 1;
         }
 
+        int i2 = 0;
+        while (i2 < 100) {
+            x2[i2] = random(0, width / 2); //X Stars are given a random location on the x axis.
+            y2[i2] = random(0, height);// When Y stars are created they are given a random location on the y axis.
+            speed2[i2] = random(1,10);//Speed is random between  1 and 10.
+            i2= i2 + 1;
+        }
+
         
     }
 
@@ -92,9 +103,26 @@ public class UI extends PApplet {
         else
             x[i] = x[i] - speed[i] / 3; //Stars going from right to left.
          if (x[i] < 0) { //If left boarder is reached then wrap around
-            x[i] = width /2; //Spawn In The Middle, Wrap From Middle.
+            x[i] = width/2; //Spawn In The Middle, Wrap From Middle.
+
             }
             i = i + 1;
+    }
+    int i2 = 0;
+        while (i2 < 100) {
+            stroke(255, 255, 0);
+            strokeWeight(2);
+            fill(255);
+            ellipse(x2[i2], y2[i2], 10, 10);
+        if (keyCode == UP) {
+            x2[i2] = x2[i2] + speed2[i2]; //Stars Going right to left 
+            }
+        else
+            x2[i2] = x2[i2] + speed2[i2] / 3; //Stars going from right to left.
+         if (x2[i2] > width) { //If left boarder is reached then wrap around
+            x2[i2] = width/2; //Spawn In The Middle, Wrap From Middle.
+            }
+            i2 = i2 + 1;
     }
 
         // Code To Have A Flash When Shooting
