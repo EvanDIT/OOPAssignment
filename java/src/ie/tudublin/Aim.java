@@ -60,5 +60,19 @@ public class Aim
         ui.ellipse(0,-50, 5,50);
 
         ui.popMatrix();
+
+                // Code To Have A Flash When Shooting
+                if (ui.mousePressed == true && (ui.mouseButton == ui.LEFT)) {
+                   ui. strokeWeight(20);
+                   ui.fill(255,255,0);
+                   ui.stroke(255,255,0);
+                   ui.ellipse(ui.mouseX, ui.mouseY, 20, 20);
+        
+                } else if(ui.mousePressed == true && (ui.mouseButton == ui.RIGHT)){
+                    ui.fill(255,255,0);
+                    ui.stroke(255,255,0);
+                    ui.strokeWeight(20);
+                    ui.ellipse(ui.mouseX, ui.mouseY, 5, 5);
+                }
     }
 }

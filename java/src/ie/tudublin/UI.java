@@ -17,7 +17,7 @@ public class UI extends PApplet {
     Bar bar;
 
 
-    // 3 Arrays for the moving star field
+    // 6 Arrays for the moving star field
     float[] x = new float[100];
     float[] y = new float[100];
     float[] speed = new float[250];
@@ -115,24 +115,24 @@ public class UI extends PApplet {
             fill(255);
             ellipse(x2[i2], y2[i2], 10, 10);
         if (keyCode == UP) {
-            x2[i2] = x2[i2] + speed2[i2]; //Stars Going right to left 
+            x2[i2] = x2[i2] + speed2[i2]; //Stars Going left to right 
             }
         else
-            x2[i2] = x2[i2] + speed2[i2] / 3; //Stars going from right to left.
-         if (x2[i2] > width) { //If left boarder is reached then wrap around
+            x2[i2] = x2[i2] + speed2[i2] / 3; //Stars going from left to right.
+         if (x2[i2] > width) { //If right boarder is reached then wrap around
             x2[i2] = width/2; //Spawn In The Middle, Wrap From Middle.
             }
             i2 = i2 + 1;
     }
 
         // Code To Have A Flash When Shooting
-        if (mousePressed == true && (mouseButton == LEFT)) {
-            strokeWeight(20);
-            ellipse(mouseX, mouseY, 20, 20);
+        // if (mousePressed == true && (mouseButton == LEFT)) {
+        //     strokeWeight(20);
+        //     ellipse(mouseX, mouseY, 20, 20);
 
-        } else if(mousePressed == true && (mouseButton == RIGHT)){
-            strokeWeight(20);
-        }
+        // } else if(mousePressed == true && (mouseButton == RIGHT)){
+        //     strokeWeight(20);
+        // }
 
 
         a.render();
