@@ -7,7 +7,7 @@ Student Number: C17308306
 Fork this repository and use it a starter project for your assignment
 
 # Description of the assignment
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=zK2SgnWHNNg)
+[![YouTube](https://www.youtube.com/watch?v=zK2SgnWHNNg)
  My assignment is based apon a spaceship cockpit.
  The spaceship can do all sorts of stuff such as shoot large or small lasers,
  travel in cruise control to even boost to light speed. All of which are displayed
