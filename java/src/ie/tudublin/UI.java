@@ -125,16 +125,6 @@ public class UI extends PApplet {
             i2 = i2 + 1;
     }
 
-        // Code To Have A Flash When Shooting
-        // if (mousePressed == true && (mouseButton == LEFT)) {
-        //     strokeWeight(20);
-        //     ellipse(mouseX, mouseY, 20, 20);
-
-        // } else if(mousePressed == true && (mouseButton == RIGHT)){
-        //     strokeWeight(20);
-        // }
-
-
         a.render();
         s.render();
         image(img,0,598);

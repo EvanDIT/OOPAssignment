@@ -52,7 +52,7 @@ public void render()
 
 void buttons()
 {
-//Loop to draw 3 buttons that spread over the landing gear button.
+//Loop to draw 3 buttons that spread over the fire button.
     ui.stroke(0,100,0);
     int gridSize = 3;	
     for(int i = 0 ; i < gridSize ; i ++)
