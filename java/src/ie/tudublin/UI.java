@@ -18,9 +18,9 @@ public class UI extends PApplet {
 
 
     // 6 Arrays for the moving star field
-    float[] x = new float[100];
-    float[] y = new float[100];
-    float[] speed = new float[250];
+    float[] x = new float[100]; //Array containing 100 x values of position X.
+    float[] y = new float[100]; //Array containing 100 y values of position Y. 
+    float[] speed = new float[250]; // Array containing 250 speed values. Stores the amount of pixels stars are moving at so that each star is at a constant speed.
     float[] x2 = new float[100];
     float[] y2 = new float[100];
     float[] speed2 = new float[250];
@@ -98,15 +98,15 @@ public class UI extends PApplet {
             fill(255);
             ellipse(x[i], y[i], 10, 10);
         if (keyCode == UP) {
-            x[i] = x[i] - speed[i]; //Stars Going right to left 
+            x[i] = x[i] - speed[i]; //Stars Going right to left, x variable is decreased by the value of the speed. Consantly updated.  
             }
         else
-            x[i] = x[i] - speed[i] / 3; //Stars going from right to left.
+            x[i] = x[i] - speed[i] / 3; //Stars going from right to left as the x variable is decreased by the value of the speed. Consantly updated. 
          if (x[i] < 0) { //If left boarder is reached then wrap around
             x[i] = width/2; //Spawn In The Middle, Wrap From Middle.
 
             }
-            i = i + 1;
+            i = i + 1; //Making the while loop false at some point. 
     }
     int i2 = 0;
         while (i2 < 100) {
@@ -115,14 +115,14 @@ public class UI extends PApplet {
             fill(255);
             ellipse(x2[i2], y2[i2], 10, 10);
         if (keyCode == UP) {
-            x2[i2] = x2[i2] + speed2[i2]; //Stars Going left to right 
+            x2[i2] = x2[i2] + speed2[i2]; //Stars Going left to right, adding the value of the speed to the value of the x position.  
             }
         else
-            x2[i2] = x2[i2] + speed2[i2] / 3; //Stars going from left to right.
+            x2[i2] = x2[i2] + speed2[i2] / 3; //Stars going from left to right. If UP is not pressed then speed is divided by 3 and added to the value of x's position. 
          if (x2[i2] > width) { //If right boarder is reached then wrap around
             x2[i2] = width/2; //Spawn In The Middle, Wrap From Middle.
             }
-            i2 = i2 + 1;
+            i2 = i2 + 1; // Making the while loop false at some point. 
     }
 
         a.render();
