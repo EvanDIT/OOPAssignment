@@ -43,7 +43,7 @@ Fork this repository and use it a starter project for your assignment
  did what I intended to do through my code is a great feeling. I had trouble with the arrays to create the stars but after 
  hours of research and many attempts later I finall got it to work. 
 
-#Youtube
+# Youtube
 
 [YouTube](https://www.youtube.com/watch?v=zK2SgnWHNNg)
 
